@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Çiçek Satın Alma Talepleri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { margin-bottom: 20px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    .btn {
+      padding: 6px 12px;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .approve { background-color: #28a745; }
+    .reject { background-color: #dc3545; }
+  </style>
+</head>
+<body>
+  <h1>Çiçek Satın Alma Talepleri</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Kullanıcı</th>
+        <th>Gönderilen Tutar</th>
+        <th>Telefon Numarası</th>
+        <th>Tarih</th>
+        <th>Durum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>kullanici_1</td>
+        <td>20 TMT</td>
+        <td>+99371692279</td>
+        <td>2025-05-10</td>
+        <td>
+          <button class="btn approve" onclick="onayla(this)">Onayla</button>
+          <button class="btn reject" onclick="reddet(this)">Reddet</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function onayla(btn) {
+      btn.parentElement.innerHTML = "<span style='color: green;'>Onaylandı</span>";
+    }
+
+    function reddet(btn) {
+      btn.parentElement.innerHTML = "<span style='color: red;'>Reddedildi</span>";
+    }
+  </script>
+</body>
+</html>
